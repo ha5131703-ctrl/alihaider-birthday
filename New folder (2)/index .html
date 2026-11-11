@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ali Haider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <!-- DATE SCREEN -->
+    <section id="dateScreen" class="screen active">
+        <div class="date-card">
+            <div class="gift-icon">🎁</div>
+            <p class="small-text">A SPECIAL DAY IS WAITING...</p>
+
+            <h1>Hey There! ✨</h1>
+            <p class="subtitle">
+                Before we start the celebration,<br>
+                enter your special date!
+            </p>
+
+            <label for="birthdayDate">Select Your Date of Birth</label>
+            <input type="date" id="birthdayDate">
+
+            <button id="nextBtn">Let's Go ❤️</button>
+            <p id="error" class="error"></p>
+        </div>
+    </section>
+
+    <!-- BIRTHDAY SCREEN -->
+    <section id="birthdayScreen" class="screen">
+        <div id="balloons"></div>
+        <div id="confetti"></div>
+
+        <div class="birthday-content">
+            <div class="sparkle">✨ 🎉 ✨</div>
+
+            <p class="top-message">TODAY IS ALL ABOUT YOU!</p>
+
+            <h1 class="happy-title">
+                Happy Birthday
+            </h1>
+
+            <h2 class="name">Ali Haider</h2>
+
+            <div class="cake">🎂</div>
+
+            <p class="wish">
+                May your life always be filled with
+                happiness, success, love and endless
+                beautiful memories.
+            </p>
+
+            <h3 class="final-message">
+                Keep Shining! 🌟
+            </h3>
+
+            <button id="replayBtn">Celebrate Again 🎉</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

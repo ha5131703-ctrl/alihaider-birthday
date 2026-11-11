@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #100b24;
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.screen.active {
+    display: flex;
+    animation: fadeIn 1s ease;
+}
+
+#dateScreen {
+    background:
+        radial-gradient(circle at top, #48216b, transparent 55%),
+        linear-gradient(135deg, #100b24, #25103e);
+}
+
+.date-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px 30px;
+    border: 1px solid #ffffff30;
+    border-radius: 28px;
+    background: #ffffff0d;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 60px #00000055;
+}
+
+.gift-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: float 2s infinite ease-in-out;
+}
+
+.small-text {
+    color: #ff9dd5;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.date-card h1 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #d4c7e8;
+    line-height: 1.8;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #ffb6dc;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ffffff40;
+    border-radius: 12px;
+    background: #ffffff15;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    color-scheme: dark;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #ff4eae, #a64dff);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 5px 25px #ff4eae55;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 30px #ff4eae88;
+}
+
+.error {
+    color: #ff8b9b;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* BIRTHDAY SCREEN */
+
+#birthdayScreen {
+    background:
+        radial-gradient(circle at 50% 20%, #57246d, transparent 50%),
+        linear-gradient(135deg, #140a2c, #301044, #160b2d);
+}
+
+.birthday-content {
+    position: relative;
+    z-index: 5;
+    max-width: 650px;
+    animation: zoomIn 1.2s ease;
+}
+
+.sparkle {
+    font-size: 35px;
+    animation: float 2s infinite;
+}
+
+.top-message {
+    color: #ffc0e8;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.happy-title {
+    font-size: clamp(35px, 8vw, 65px);
+    font-weight: 800;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #fff, #ff8ccc, #ffe5a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name {
+    font-size: clamp(35px, 9vw, 75px);
+    color: #ff85ce;
+    text-shadow: 0 0 30px #ff40a8;
+    animation: glow 2s infinite alternate;
+    margin-top: 5px;
+}
+
+.cake {
+    font-size: 110px;
+    margin: 20px 0;
+    animation: cakeFloat 2s infinite ease-in-out;
+}
+
+.wish {
+    color: #e8d9f5;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.final-message {
+    font-size: 23px;
+    color: #ffcae8;
+    margin-top: 20px;
+}
+
+#replayBtn {
+    max-width: 220px;
+}
+
+/* BALLOONS */
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    font-size: 55px;
+    animation: rise linear forwards;
+    z-index: 2;
+}
+
+/* CONFETTI */
+
+.confetti-piece {
+    position: absolute;
+    top: -15px;
+    width: 9px;
+    height: 15px;
+    border-radius: 3px;
+    animation: confettiFall linear forwards;
+    z-index: 3;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes cakeFloat {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff40a8; }
+    to { text-shadow: 0 0 35px #ff40a8, 0 0 60px #a64dff; }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-120vh) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    .date-card {
+        padding: 30px 22px;
+    }
+
+    .date-card h1 {
+        font-size: 29px;
+    }
+
+    .cake {
+        font-size: 85px;
+    }
+
+    .wish {
+        font-size: 13px;
+    }
+
+    .top-message {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
